@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- иконки fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- кастомные стили -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
+
+    {% block title %}<h3>Информационный лист для склада, от отдела логистики о ближайших поставках товара.</h3>
+    <h3>Дата составления: 24.11.24, ответственные за заполнение: менеджеры отдела логискики, отдела снабжения.</h3> {% endblock %}
+
+
+{% block content %}
+    <div class="container my-5">
+             <button>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5000/index">ВЕРНУТЬСЯ В "СКЛАДСКОЙ УЧЕТ"</a>
+                </li>
+             </button>
+        <h2 class="text-center mb-4">ГРАФИК ПОСТАВОК ТОВАРА МАГАЗИН "БРУСНИКА"</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>ПОСТАВКА ТОВАРА : Орех кедровый 30гр, фасовка по 100 гр.</h4>
+                <h4>Поступление ожидается к 30.11.24</h4>
+                <p class="mb-0">Транспортная компания "Деловые линии"</p>
+                <p class="text-muted">Поставщик ООО "СЛАВИЯ" г. Томск</p>
+            </div>
+            <div class="col-md-6">
+                <h4>ПОСТАВКА ТОВАРА : ягода брусника 50 кг, фасовка по 500гр</h4>
+                <h4>Поставка ожидается: 10.12.24</h4>
+                <p class="mb-0">Ягода замороженная, Складу подготовить морозильные камеры</p>
+                <p class="text-muted">- Транспортная компания "Кит"</p>
+                <p class="text-muted">- Посавщик ИП Смирнов г. Омск</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h3>ОТПРАВЛЕНЫ ЗАЯВКИ НА ПОСТАВКУ ГРУЗОВ ОЖЕДАЕМ ОФОРМЛЕНИЯ И ПОСТАВКУ В БЛИЖАЙШЕЕ ВРЕМЯ!!!</h3>
+                <ul class="list-group">
+                    <li class="list-group-item border-0 py-1"><i class="fa fa-cog"></i> ЧАЙ "ПРИЭЛЬБРУССКИЙ"</li>
+                    <li class="list-group-item border-0 py-1"><i class="fa fa-cog"></i> СМОЛКА ЖЕВАТЕЛЬНАЯ ЛИСТВЕННИЧНАЯ</li>
+                    <li class="list-group-item border-0 py-1"><i class="fa fa-cog"></i> "КАПЛИ В НОС КЕДРОВЫЕ" НОВАЯ ПОЗИЦИЯ!</li>
+                    <li class="list-group-item border-0 py-1"><i class="fa fa-cog"></i> "МАЗЬ КЕДРОВАЯ ЖИВИЧНАЯ" НОВАЯ ПОЗИЦЯ</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>СКЛАД ПРЕДОСТАВИТЬ ДО 30.11.24 ИНФОРМАЦИЮ ПО РЕАЛЬНЫМ ОСТАТКАМ В ОТДЕЛ СНАБЖЕНИЯ ПО СДЕДУЮЩИМ ПОЗИЦИЯМ:</h2>
+                <h4>Семена льна</h4>
+                <p class="text-muted mb-0">- Остаток: сколько упаковок</p>
+                <p class="text-muted">- вес в упаковке.</p>
+                <h4>Масло Льняное</h4>
+                <p class="text-muted mb-0">- Остаток: сколько упаковок</p>
+                <p class="text-muted">- какое количество уп., какого объема.</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h3>Контакты:</h3>
+                <p class="mb-0"><i class="fa fa-phone"></i> т. отдел логистики 8-800-00000007, т. отдел снабжения 8-800-000000005</p>
+                <p class="mb-0"><i class="fa fa-envelope"></i> log@mail.ru, cnab@mail.ru </p>
+                <p class="mb-0"><i class="fa fa-telegram"></i> телеграмм: 8-934-5678123 </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

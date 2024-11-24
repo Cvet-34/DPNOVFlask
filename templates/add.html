@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Добавить товар</h1>
+    <div class="col-6">
+    <form method="post" action="{{ url_for('add_grocery') }}">
+        <div class="mb-3">
+            <label for="name" class="form-label">Название товара</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Описание</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="weight" class="form-label">Вес 1 шт в граммах</label>
+            <input type="text" class="form-control" id="weight" name="weight" required>
+        </div>
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Количество шт.</label>
+            <input type="text" class="form-control" id="quantity" name="quantity" required>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Цена за 1 шт.</label>
+            <input type="text" class="form-control" id="price" name="price" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Добавить</button>
+    </form>
+    </div>
+{% endblock %}
